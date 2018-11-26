@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.SysUserMapper">
+	<!--parameterType="",resultType=""  -->
+	<select id="findSysUsers" resultType="SysUser">
+		SELECT SYS_USER.USER_ID, SYS_USER.LOGIN_NAME, SYS_USER.LOGIN_PWD, SYS_USER.USER_NAME, SYS_USER.STATUS, SYS_USER.LAST_LOGIN_TIME, SYS_USER.LAST_LOGIN_IP, SYS_USER.CREATE_TIME, SYS_USER.EMAIL, SYS_USER.TEL, SYS_USER.ROLE_ID FROM SYS_USER WHERE SYS_USER.STATUS!=2 ORDER BY SYS_USER.USER_ID 
+	</select>
+
+</mapper>
