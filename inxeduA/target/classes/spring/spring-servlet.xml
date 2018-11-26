@@ -32,6 +32,8 @@
 	
     <!-- AOP -->
 	<!--  <aop:config>
+	    <bean id="aspectTest" class="com.demo.bean.AspectTest">
+	     </bean>
 		<aop:pointcut expression="execution(* com.demo.mapper.*.*(..))" id="mypointcut"/>
 		
 		<aop:aspect ref="aspectTest">
