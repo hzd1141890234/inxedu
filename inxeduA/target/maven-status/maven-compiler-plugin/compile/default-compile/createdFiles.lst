@@ -1,8 +1,17 @@
+com\demo\service\interfaces\media\mediaService.class
 com\demo\mapper\SysUserMapper.class
 com\demo\util\JsonUtils.class
 com\demo\controller\SysUserController.class
+com\demo\service\impl\main\mainImp.class
+com\demo\controller\mainHandler\mainHandler.class
+com\demo\service\interfaces\main\mainService.class
 com\demo\service\jedis\JedisClientPool.class
+com\demo\model\main\SYS_FUNCTION.class
 com\demo\service\impl\SysUerServiceImpl.class
 com\demo\model\SysUser.class
+com\demo\mapper\main\mainMapper.class
+com\demo\controller\mainHandler\mediaHandler.class
+com\demo\mapper\media\mediaMapper.class
 com\demo\service\jedis\JedisClient.class
+com\demo\service\impl\media\mediaImp.class
 com\demo\service\interfaces\SysUserService.class
