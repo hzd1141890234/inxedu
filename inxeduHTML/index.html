@@ -1,537 +1,370 @@
+<!DOCTYPE html>
 
-<!doctype html>
-<html class="no-js">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Amaze UI Admin index Examples</title>
-<meta name="description" content="这是一个 index 页面">
-<meta name="keywords" content="index">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="renderer" content="webkit">
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="icon" type="image/png" href="assets/i/favicon.png">
-<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-<meta name="apple-mobile-web-app-title" content="Amaze UI" />
-<link rel="stylesheet" href="assets/css/amazeui.min.css"/>
-<link rel="stylesheet" href="assets/css/admin.css">
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/app.js"></script>
-</head>
-<body>
-<!--[if lte IE 9]><p class="browsehappy">升级你的浏览器吧！ <a href="http://se.360.cn/" target="_blank">升级浏览器</a>以获得更好的体验！</p><![endif]-->
-</head>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 
-<body>
-<header class="am-topbar admin-header">
-  <div class="am-topbar-brand"><img src="assets/i/logo.png"></div>
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 
-  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
-    <ul class="am-nav am-nav-pills am-topbar-nav admin-header-list">
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+	<!--<![endif]-->
 
-   <li class="am-dropdown tognzhi" data-am-dropdown>
-  <button class="am-btn am-btn-primary am-dropdown-toggle am-btn-xs am-radius am-icon-bell-o" data-am-dropdown-toggle> 消息管理<span class="am-badge am-badge-danger am-round">6</span></button>
-  <ul class="am-dropdown-content">
-  	
-  	
-  	
-    <li class="am-dropdown-header">所有消息都在这里</li>
+	<!-- BEGIN HEAD -->
 
-    
+	<head>
 
-    <li><a href="#">未激活会员 <span class="am-badge am-badge-danger am-round">556</span></a></li>
-    <li><a href="#">未激活代理 <span class="am-badge am-badge-danger am-round">69</span></a></a></li>
-    <li><a href="#">未处理汇款</a></li>
-    <li><a href="#">未发放提现</a></li>
-    <li><a href="#">未发货订单</a></li>
-    <li><a href="#">低库存产品</a></li>
-    <li><a href="#">信息反馈</a></li>
-    
-    
-    
-  </ul>
-</li>
+		<meta charset="utf-8" />
 
- <li class="kuanjie">
- 	
- 	<a href="#">会员管理</a>          
- 	<a href="#">奖金管理</a> 
- 	<a href="#">订单管理</a>   
- 	<a href="#">产品管理</a> 
- 	<a href="#">个人中心</a> 
- 	 <a href="#">系统设置</a>
- </li>
+		<title>Metronic | Admin Dashboard Template</title>
 
- <li class="soso">
- 	
-<p>   
-	
-	<select data-am-selected="{btnWidth: 70, btnSize: 'sm', btnStyle: 'default'}">
-          <option value="b">全部</option>
-          <option value="o">产品</option>
-          <option value="o">会员</option>
-          
-        </select>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-</p>
+		<meta content="" name="description" />
 
-<p class="ycfg"><input type="text" class="am-form-field am-input-sm" placeholder="圆角表单域" /></p>
-<p><button class="am-btn am-btn-xs am-btn-default am-xiao"><i class="am-icon-search"></i></button></p>
- </li>
+		<meta content="" name="author" />
 
+		<!-- BEGIN GLOBAL MANDATORY STYLES -->
 
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 
-      <li class="am-hide-sm-only" style="float: right;"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
-    </ul>
-  </div>
-</header>
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-<div class="am-cf admin-main"> 
+		<link href="assets/css/style-metro.css" rel="stylesheet" type="text/css" />
 
-<div class="nav-navicon admin-main admin-sidebar">
-    
-    
-    <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
-    <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="#">商品管理</a></h3>
-      <ul>
-        <li><a href="">商品列表</a></li>
-        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'>添加新商品</li>
-        <li>商品分类</li>
-        <li>用户评论</li>
-        <li>商品回收站</li>
-        <li>库存管理 </li>
-      </ul>
-      <h3 class="am-icon-cart-plus"><em></em> <a href="#"> 订单管理</a></h3>
-      <ul>
-        <li>订单列表</li>
-        <li>合并订单</li>
-        <li>订单打印</li>
-        <li>添加订单</li>
-        <li>发货单列表</li>
-        <li>换货单列表</li>
-      </ul>
-      <h3 class="am-icon-users"><em></em> <a href="#">会员管理</a></h3>
-      <ul>
-        <li>会员列表 </li>
-        <li>未激活会员</li>
-        <li>团队系谱图</li>
-        <li>会员推荐图</li>
-        <li>推荐列表</li>
-      </ul>
-      <h3 class="am-icon-volume-up"><em></em> <a href="#">信息通知</a></h3>
-      <ul>
-        <li>站内消息 /留言 </li>
-        <li>短信</li>
-        <li>邮件</li>
-        <li>微信</li>
-        <li>客服</li>
-      </ul>
-      <h3 class="am-icon-gears"><em></em> <a href="#">系统设置</a></h3>
-      <ul>
-        <li>数据备份</li>
-        <li>邮件/短信管理</li>
-        <li>上传/下载</li>
-        <li>权限</li>
-        <li>网站设置</li>
-        <li>第三方支付</li>
-        <li>提现 /转账 出入账汇率</li>
-        <li>平台设置</li>
-        <li>声音文件</li>
-      </ul>
-    </div>
-    <!-- sideMenu End --> 
-    
-    <script type="text/javascript">
-			jQuery(".sideMenu").slide({
-				titCell:"h3", //鼠标触发对象
-				targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
-				effect:"slideDown", //targetCell下拉效果
-				delayTime:300 , //效果时间
-				triggerTime:150, //鼠标延迟触发时间（默认150）
-				defaultPlay:true,//默认是否执行效果（默认true）
-				returnDefault:true //鼠标从.sideMen移走后返回默认状态（默认false）
-				});
-		</script> 
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
-    
-    
-    
-    
-    
-    
-    
-</div>
+		<link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
 
-<div class=" admin-content">
-	
-		<div class="daohang">
-			<ul>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs"> 首页 </li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">帮助中心<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">奖金管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">产品管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				
-				
-			</ul>
+		<link href="assets/css/default.css" rel="stylesheet" type="text/css" id="style_color" />
 
-       
+		<link href="assets/css/uniform.default.css" rel="stylesheet" type="text/css" />
 
-	
-</div>
-	
-	
+		<!-- END GLOBAL MANDATORY STYLES -->
 
+		<!-- BEGIN PAGE LEVEL STYLES -->
 
-<div class="admin">
-	
+		<link href="assets/css/jquery.gritter.css" rel="stylesheet" type="text/css" />
 
-	
-	
-   
-   <div class="admin-index">
-      <dl data-am-scrollspy="{animation: 'slide-right', delay: 100}">
-        <dt class="qs"><i class="am-icon-users"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">团队数量</dd>
-      </dl>
-      <dl data-am-scrollspy="{animation: 'slide-right', delay: 300}">
-        <dt class="cs"><i class="am-icon-area-chart"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">今日收入</dd>
-      </dl>
-      <dl data-am-scrollspy="{animation: 'slide-right', delay: 600}">
-        <dt class="hs"><i class="am-icon-shopping-cart"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">商品数量</dd>
-      </dl>
-      <dl data-am-scrollspy="{animation: 'slide-right', delay: 900}">
-        <dt class="ls"><i class="am-icon-cny"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">全部收入</dd>
-      </dl>
-    </div>
-    <div class="admin-biaoge">
-      <div class="xinxitj">信息概况</div>
-      <table class="am-table">
-        <thead>
-          <tr>
-            <th>团队统计</th>
-            <th>全部会员</th>
-            <th>全部未激活</th>
-            <th>今日新增</th>
-            <th>今日未激活</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>普卡</td>
-            <td>普卡</td>
-            <td><a href="#">4534</a></td>
-            <td>+20</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>银卡</td>
-            <td>银卡</td>
-            <td>4534</td>
-            <td>+2</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>金卡</td>
-            <td>金卡</td>
-            <td>4534</td>
-            <td>+10</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>钻卡</td>
-            <td>钻卡</td>
-            <td>4534</td>
-            <td>+50</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>合计</td>
-            <td>合计</td>
-            <td>4534</td>
-            <td>+50</td>
-            <td> 4534 </td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="am-table">
-        <thead>
-          <tr>
-            <th>团队统计</th>
-            <th>全部会员</th>
-            <th>全部未激活</th>
-            <th>今日新增</th>
-            <th>今日未激活</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>普卡</td>
-            <td>普卡</td>
-            <td>4534</td>
-            <td>+50</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>银卡</td>
-            <td>银卡</td>
-            <td>4534</td>
-            <td>+2</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>金卡</td>
-            <td>金卡</td>
-            <td>4534</td>
-            <td>+10</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>钻卡</td>
-            <td>钻卡</td>
-            <td>4534</td>
-            <td>+50</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>合计</td>
-            <td>合计</td>
-            <td>4534</td>
-            <td>+50</td>
-            <td> 4534 </td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="am-table">
-        <thead>
-          <tr>
-            <th>资金统计</th>
-            <th>账户总收入</th>
-            <th>账户总支出</th>
-            <th>账户余额</th>
-            <th>今日收入</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>普卡</td>
-            <td>普卡</td>
-            <td>4534</td>
-            <td>+20</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>银卡</td>
-            <td>银卡</td>
-            <td>4534</td>
-            <td>+2</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>金卡</td>
-            <td>金卡</td>
-            <td>4534</td>
-            <td>+10</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>钻卡</td>
-            <td>钻卡</td>
-            <td>4534</td>
-            <td>+50</td>
-            <td> 4534 </td>
-          </tr>
-          <tr>
-            <td>合计</td>
-            <td>合计</td>
-            <td>4534</td>
-            <td>+50</td>
-            <td> 4534 </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="shuju">
-      <div class="shujuone">
-        <dl>
-          <dt>全盘收入：  1356666</dt>
-          <dt>全盘支出：   5646465.98</dt>
-          <dt>全盘利润：  546464</dt>
-        </dl>
-        <ul>
-          <h2>26.83%</h2>
-          <li>全盘拨出</li>
-        </ul>
-      </div>
-      <div class="shujutow">
-        <dl>
-          <dt>全盘收入：  1356666</dt>
-          <dt>全盘支出：   5646465.98</dt>
-          <dt>全盘利润：  546464</dt>
-        </dl>
-        <ul>
-          <h2>26.83%</h2>
-          <li>全盘拨出</li>
-        </ul>
-      </div>
-      <div class="slideTxtBox">
-        <div class="hd">
-          <ul>
-            <li>其他信息</li>
-            <li>工作进度表</li>
-          </ul>
-        </div>
-        <div class="bd">
-          <ul>
-            <table width="100%" class="am-table">
-              <tbody>
-                <tr>
-                  <td width="7%"  align="center">1 </td>
-                  <td width="83%" >工作进度名称</td>
-                  <td width="10%"  align="center"><a href="#">10%</a></td>
-                </tr>
-                <tr>
-                  <td align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
-                </tr>
-                <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
-                </tr>
-                <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
-                </tr>
-                
-                <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
-                </tr>
-                
-                <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
-                </tr>
-                
-                <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
-                </tr>
-                
-                
-                
-                
-                
-                
-                
-                
-              </tbody>
-            </table>
-          </ul>
-          <ul>
-            <table class="am-table">
-              <tbody>
-                <tr>
-                  <td>普卡</td>
-                  <td>普卡</td>
-                  <td><a href="#">4534</a></td>
-                  <td>+20</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>银卡</td>
-                  <td>银卡</td>
-                  <td>4534</td>
-                  <td>+2</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>金卡</td>
-                  <td>金卡</td>
-                  <td>4534</td>
-                  <td>+10</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>钻卡</td>
-                  <td>钻卡</td>
-                  <td>4534</td>
-                  <td>+50</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>合计</td>
-                  <td>合计</td>
-                  <td>4534</td>
-                  <td>+50</td>
-                  <td> 4534 </td>
-                </tr>
-              </tbody>
-            </table>
-          </ul>
-        </div>
-      </div>
-      <script type="text/javascript">jQuery(".slideTxtBox").slide();</script> 
-   
-   
-   
-   
-   
-   
-   
-   
-</div>
+		<link href="assets/css/daterangepicker.css" rel="stylesheet" type="text/css" />
 
-    <div class="foods">
-    	<ul>版权所有@2015 .模板收集自 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> -  More Templates<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></ul>
-    	<dl><a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a></dl>
+		<link href="assets/css/fullcalendar.css" rel="stylesheet" type="text/css" />
 
+		<link href="assets/css/jqvmap.css" rel="stylesheet" type="text/css" assets="screen" />
 
-    	
-    </div>
+		<link href="assets/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" assets="screen" />
 
+		<!-- END PAGE LEVEL STYLES -->
 
+		<link rel="shortcut icon" href="assets/img/favicon.ico" />
 
+	</head>
 
+	<!-- END HEAD -->
 
+	<!-- BEGIN BODY -->
 
+	<body class="page-header-fixed">
 
-</div>
+		<!-- BEGIN HEADER -->
 
-</div>
+		<div class="header navbar navbar-inverse navbar-fixed-top">
 
+			<!-- BEGIN TOP NAVIGATION BAR -->
 
+			<div class="navbar-inner">
 
+				<div class="container-fluid">
 
-</div>
+					<!-- BEGIN LOGO -->
 
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/polyfill/rem.min.js"></script>
-<script src="assets/js/polyfill/respond.min.js"></script>
-<script src="assets/js/amazeui.legacy.js"></script>
-<![endif]--> 
+					<a class="brand" href="index.html">
 
-<!--[if (gte IE 9)|!(IE)]><!--> 
-<script src="assets/js/amazeui.min.js"></script>
-<!--<![endif]-->
+						<img src="assets/img/logo.png" alt="logo" />
 
+					</a>
 
+					<!-- END LOGO -->
 
-</body>
+					<!-- BEGIN TOP NAVIGATION MENU -->
+
+					<ul class="nav pull-right">
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<li class="dropdown user">
+
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+								<img alt="" src="assets/img/avatar1_small.jpg" />
+
+								<span class="username">Bob Nilson</span>
+
+								<i class="icon-angle-down"></i>
+
+							</a>
+
+							<ul class="dropdown-menu">
+
+								<li>
+									<a href="#"><i class="icon-user"></i> 个人信息</a>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-calendar"></i> My Calendar</a>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-envelope"></i> My Inbox(3)</a>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-tasks"></i> My Tasks</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a>
+								</li>
+
+								<li>
+									<a href="login.html"><i class="icon-key"></i> 退出系统</a>
+								</li>
+
+							</ul>
+
+						</li>
+
+						<!-- END USER LOGIN DROPDOWN -->
+
+					</ul>
+
+					<!-- END TOP NAVIGATION MENU -->
+
+				</div>
+
+			</div>
+
+			<!-- END TOP NAVIGATION BAR -->
+
+		</div>
+
+		<!-- BEGIN CONTAINER -->
+
+		<div class="page-container">
+
+			<!-- BEGIN SIDEBAR -->
+
+			<div class="page-sidebar nav-collapse collapse">
+
+				<!-- BEGIN SIDEBAR MENU -->
+
+				<ul class="page-sidebar-menu">
+
+					<li class="start active ">
+
+						<a href="index2.html">
+
+							<i class="icon-home"></i>
+
+							<span class="title"> 菜单目录/MENU</span>
+
+							<span class="selected"></span>
+
+						</a>
+
+					</li>
+
+					<script type="text/template" id="tpl">
+						{{each lists}}
+						<li class="">
+
+							<a href="javascript:;">
+								<i class="icon-cogs"></i>
+								<span class="title">{{$value.FUNCTION_NAME}}</span>
+								<span class="arrow "></span>
+							</a>
+
+							<ul class="sub-menu">
+								{{each $value.cmap}}
+								<li>
+									<a href="{{$value.FUNCTION_URL}}" target="iframeName">{{$value.FUNCTION_NAME}}</a>
+								</li>
+
+								{{ /each }}
+							</ul>
+
+						</li>
+						{{ /each }}
+					</script>
+					<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+					<script src="assets/js/template-web.js"></script>
+
+					<script>
+						$.ajax({
+							type: "get",
+							url: "http://127.0.0.1:8090/main",
+
+							success: function(data) {
+								// 调用模板引擎
+								var html = template('tpl', {
+									lists: data
+								});
+
+								console.log(html);
+								// 将拼凑的html字符串添加到页面
+								document.querySelector('.page-sidebar-menu').innerHTML = html;
+							}
+						});
+					</script>
+
+					<!--xxx-->
+				</ul>
+				<!-- END SIDEBAR MENU -->
+
+			</div>
+
+			<!-- END SIDEBAR -->
+
+			<!-- 窗口 BEGIN PAGE -->
+			<div class="page-content">
+				<div id="" style="margin-left:25px;">
+					<iframe src="main.html" width="100%" height="100%" id="B" name="iframeName" frameborder="0">
+                    </iframe>
+				</div>
+			</div>
+
+			<!-- END PAGE -->
+
+		</div>
+
+		<!-- END CONTAINER -->
+
+		<!-- 备注 FOOTER 
+
+	<div class="footer">
+
+		<div class="footer-inner">
+
+			2013 &copy; Metronic by keenthemes.Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+
+		</div>
+
+		<div class="footer-tools">
+
+			<span class="go-top">
+
+			<i class="icon-angle-up"></i>
+
+			</span>
+
+		</div>
+
+	</div>
+-->
+		<!-- END FOOTER -->
+
+		<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+		<!-- BEGIN CORE PLUGINS -->
+
+		<script src="assets/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+		<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+		<script src="assets/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+		<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+		<!--[if lt IE 9]>
+
+	<script src="assets/js/excanvas.min.js"></script>
+
+	<script src="assets/js/respond.min.js"></script>  
+
+	<![endif]-->
+
+		<script src="assets/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+		<!-- END CORE PLUGINS -->
+
+		<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+		<script src="assets/js/jquery.vmap.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.vmap.russia.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.vmap.world.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.vmap.europe.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.vmap.germany.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.vmap.usa.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.vmap.sampledata.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.flot.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.flot.resize.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.pulsate.min.js" type="text/javascript"></script>
+
+		<script src="assets/js/date.js" type="text/javascript"></script>
+
+		<script src="assets/js/daterangepicker.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.gritter.js" type="text/javascript"></script>
+
+		<script src="assets/js/fullcalendar.min.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
+
+		<script src="assets/js/jquery.sparkline.min.js" type="text/javascript"></script>
+
+		<!-- END PAGE LEVEL PLUGINS -->
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+		<script src="assets/js/app.js" type="text/javascript"></script>
+
+		<script src="assets/js/index.js" type="text/javascript"></script>
+
+		<!-- END PAGE LEVEL SCRIPTS -->
+
+		<script>
+			jQuery(document).ready(function() {
+
+				App.init(); // initlayout and core plugins
+
+				Index.init();
+
+				Index.initJQVMAP(); // init index page's custom scripts
+
+				Index.initCalendar(); // init index page's custom scripts
+
+				Index.initCharts(); // init index page's custom scripts
+
+				Index.initChat();
+
+				Index.initMiniCharts();
+
+				Index.initDashboardDaterange();
+
+				Index.initIntro();
+
+			});
+		</script>
+
+		<!-- END JAVASCRIPTS -->
+
+	</body>
+
+	<!-- END BODY -->
+
 </html>
