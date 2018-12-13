@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.system.main.authorityMapper">
+ <insert id="cresateSysFunction" parameterType="SYS_FUNCTION">
+   INSERT into sys_function VALUES(DEFAULT,#{PARENT_ID},"新建的权限",#{FUNCTION_URL},1,NOW(),#{SORT})
+ </insert>
+ <delete id="deleteFunctionByIds" parameterType="List">
+         delete from sys_function where FUNCTION_ID in
+	    <foreach collection="array" item="ids" open="(" close=")" separator=",">
+			 #{ids}
+		</foreach>
+ </delete>
+ <update id="updateFunction" parameterType="SYS_FUNCTION">
+   update sys_function set FUNCTION_NAME=#{FUNCTION_NAME},FUNCTION_URL=#{FUNCTION_URL},FUNCTION_TYPE=#{FUNCTION_TYPE},create_time=now(),SORT=#{sort}
+   where FUNCTION_ID=#{FUNCTION_ID}
+ </update>
+ <update id="updateParentId" parameterType="SYS_FUNCTION">
+   UPDATE sys_function set PARENT_ID=#{PARENT_ID} WHERE FUNCTION_ID=#{FUNCTION_ID}
+ </update>
+</mapper>

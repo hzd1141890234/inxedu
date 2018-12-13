@@ -7,15 +7,13 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 	<context:component-scan base-package="com.demo.controller"></context:component-scan>
-
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/"></property>
-		<property name="suffix" value=".jsp"></property>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	
 	</bean>
 	<mvc:cors>
 		<mvc:mapping path="/**"/>
 	</mvc:cors>
 	<mvc:default-servlet-handler/>
-     <mvc:annotation-driven></mvc:annotation-driven>
+    <mvc:annotation-driven></mvc:annotation-driven>
 </beans>
 	

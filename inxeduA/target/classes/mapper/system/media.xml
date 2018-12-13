@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.system.media.mediaMapper">
+	<select id="selectEDU_WEBSITE_IMAGES_TYPE" resultType="Map">
+		SELECT TYPE_ID ,TYPE_NAME  FROM EDU_WEBSITE_IMAGES_TYPE
+	</select>
+	<select id="selectMedia_List" resultType="media_List" parameterType="media_List">
+		select ewi.IMAGE_ID,ewit.TYPE_ID,
+		ewi.title,ewi.IMAGE_URL,ewi.LINK_ADDRESS,ewit.TYPE_NAME,ewi.SERIES_NUMBER
+		from edu_website_images ewi,edu_website_images_type ewit WHERE
+		ewi.TYPE_ID=ewit.TYPE_ID 
+		<if test="title!=null and title!=''">
+		 and ewi.title like '%${title}%'
+		</if>
+		<if test="type_id!=null and type_id !=''" >
+		and ewit.TYPE_ID =#{type_id}
+		</if>
+	</select>
+	<delete id="deleteMedia" parameterType="java.lang.String">
+	delete from edu_website_images where image_id=#{image_id}
+	</delete>
+	<delete id="deleteMedias" parameterType="java.util.List">
+	 delete from edu_website_images where image_id in
+	    <foreach collection="array" item="ids" open="(" close=")" separator=",">
+			#{ids}
+		</foreach>
+	</delete>
+	<insert id="insertMedia" parameterType="edu_website_images">
+	 insert into edu_website_images values(default,#{image_url},#{link_address},#{title},#{type_id},#{series_number},#{preview_url},#{color},#{describe})
+	</insert>
+	
+</mapper>

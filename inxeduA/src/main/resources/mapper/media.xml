@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.demo.mapper.media.mediaMapper">
-  <select id="selectEDU_WEBSITE_IMAGES_TYPE">
-       SELECT TYPE_ID AS typeId,TYPE_NAME AS typeName FROM EDU_WEBSITE_IMAGES_TYPE 
-  </select>
-</mapper>

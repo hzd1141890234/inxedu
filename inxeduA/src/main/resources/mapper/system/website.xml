@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.system.website.websiteMapper">
+ <select id="select_website_guide" resultType="Map" parameterType="website_guide">
+    select * from edu_website_navigate where 1=1
+     <if test="type!=null and type !=''">
+     and type =#{type}
+    </if>
+ </select>
+ <select id="select_website_type" resultType="Map">
+    select DISTINCT(ewn.TYPE),ewn.NEWPAGE  from edu_website_navigate ewn
+ </select>
+ <select id="select_website_guideById" resultType="Map"  parameterType="String">
+     select * from edu_website_navigate where id=#{id}
+ </select>
+ <delete id="deleteWebsite" parameterType="String">
+    delete from edu_website_navigate where id=#{id}
+ </delete>
+ <update id="updateWebsite" parameterType="String">
+    update edu_website_navigate set status=1 where id=#{id}
+ </update>
+  <update id="updateWebsites"  parameterType="website_guide">
+   update edu_website_navigate ewn set ewn.name=#{name},ewn.url=#{url},ewn.newpage=#{newpage},ewn.type=#{type},
+   ewn.ordernum=#{ordernum} where ewn.id=#{id}
+  </update>
+  <insert id="insertWebsite" parameterType="website_guide">
+    insert into edu_website_navigate values(default,#{name},#{url},#{newpage},#{type},#{ordernum},0) 
+  </insert>
+  
+  
+  
+</mapper>

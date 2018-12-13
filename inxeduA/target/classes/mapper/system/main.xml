@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.system.main.mainMapper">
+   <select id="selectMain" resultType="Map" parameterType="String">
+      SELECT SYS_FUNCTION.FUNCTION_ID, SYS_FUNCTION.PARENT_ID, SYS_FUNCTION.FUNCTION_NAME, SYS_FUNCTION.FUNCTION_URL, SYS_FUNCTION.FUNCTION_TYPE, SYS_FUNCTION.CREATE_TIME, SYS_FUNCTION.SORT FROM SYS_FUNCTION  WHERE SYS_FUNCTION.PARENT_ID=#{parent_id}
+  	ORDER BY SYS_FUNCTION.SORT DESC
+   </select>
+   
+   <select id="selectSys_Role_Page" resultType="Map" >
+        SELECT SYS_FUNCTION.FUNCTION_ID, SYS_FUNCTION.PARENT_ID, SYS_FUNCTION.FUNCTION_NAME, SYS_FUNCTION.FUNCTION_URL,SYS_FUNCTION.FUNCTION_TYPE, SYS_FUNCTION.CREATE_TIME, SYS_FUNCTION.SORT  FROM SYS_FUNCTION ORDER BY SYS_FUNCTION.SORT DESC 
+   </select>
+    <select id="selectSys_Role_PageById" resultType="Map" parameterType="String">
+       SELECT sf.FUNCTION_ID,sf.PARENT_ID,sf.FUNCTION_NAME,sf.FUNCTION_URL,sf.FUNCTION_TYPE FROM sys_function sf,sys_role_function srf,sys_role sr where srf.FUNCTION_ID = sf.FUNCTION_ID and sr.ROLE_ID=srf.ROLE_ID  AND srf.ROLE_ID =#{role_id}   ORDER BY sf.SORT DESC
+   </select>
+   
+   <select id="selectSys_Role" resultType="Map">
+      select * from SYS_ROLE;
+   </select>
+   <select id="selectRolE_srf" parameterType="sys_role_function" resultType="Map">
+   select * from sys_role_function where ROLE_ID=#{role_id}
+   </select>
+   <delete id="deleteRole_Id" parameterType="String">
+      delete from sys_role where ROLE_ID=#{role_id}
+   </delete>
+   
+   <delete id="deleteRole_srfByID" parameterType="sys_role_function">
+   delete from sys_role_function where ROLE_ID=#{role_id} and FUNCTION_ID=#{function_id}
+   </delete>
+   
+   <delete id="deleteRole_srf" parameterType="String">
+      delete from sys_role_function where ROLE_ID=#{role_id}
+   </delete>
+   <insert id="insertRole_srf" parameterType="Integer">
+	 insert into sys_role_function VALUES(#{role_id},#{function_id})
+	</insert>
+	<select id="selectCount" parameterType="sys_role_function" resultType="Integer">
+	select COUNT(*) from sys_role_function where ROLE_ID=#{role_id} and FUNCTION_ID=#{function_id}
+	</select>
+	<insert id="createSys_Role" parameterType="sys_role">
+	  INSERT into sys_role VALUES(DEFAULT,#{role_name},NOW())
+	</insert>
+	<update id="updateSys_Role" parameterType="sys_role">
+	   update sys_role set role_name=#{role_name},create_time=now() where role_id=#{role_id}
+	</update>
+</mapper>

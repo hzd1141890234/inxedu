@@ -43,7 +43,8 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="typeAliasesPackage" value="com.demo.model"></property>
-		 <property name="mapperLocations" value="classpath:mapper/*.xml"></property> 
+		<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
+		 <property name="mapperLocations" value="classpath:mapper/*/*.xml"></property> 
 	</bean>
 	
 	
@@ -65,6 +66,7 @@
 			
 			<tx:method name="add*" isolation="READ_COMMITTED" rollback-for="Exception"/>
 			<tx:method name="save*" isolation="READ_COMMITTED" rollback-for="Exception"/>
+			<tx:method name="insert*" isolation="READ_COMMITTED" rollback-for="Exception"/>
 			<tx:method name="update*" isolation="READ_COMMITTED" rollback-for="Exception"/>
 			<tx:method name="delete*" isolation="READ_COMMITTED" rollback-for="Exception"/>
 		</tx:attributes>
